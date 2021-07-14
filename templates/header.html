@@ -5,7 +5,24 @@
     <div class="pragmatic_header_button">
         <span>게시물</span>
         <span>프로필</span>
-        <span>팔로워</span>
-        <span>팔로잉</span>
+
+        {% if not user.is_authenticated %}
+        <span>
+            <a href="{% url 'accountapp:login' %}">
+                Login
+            </a>
+        </span>
+        <span>
+            <a href="{% url 'accountapp:create' %}">
+                SignUp
+            </a>
+        </span>
+        {% else %}
+        <span>
+            <a href="{% url 'accountapp:logout' %}">
+                LogOut
+            </a>
+        </span>
+        {% endif %}
     </div>
 </div>
