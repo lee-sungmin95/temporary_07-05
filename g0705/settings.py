@@ -16,7 +16,9 @@ from pathlib import Path
 from django.urls import reverse_lazy
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+
 env_list = dict()
+
 local_env = open(os.path.join(BASE_DIR, '.env'))
 
 while True:
@@ -34,7 +36,6 @@ while True:
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = env_list['SECRET_KEY']
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -61,6 +62,7 @@ INSTALLED_APPS = [
 ]
 
 from django.contrib.messages import constants as messages
+
 MESSAGE_TAGS = {
     messages.ERROR: 'danger',
 }
