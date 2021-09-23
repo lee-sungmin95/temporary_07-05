@@ -2,7 +2,7 @@ FROM python:3.9.0
 
 WORKDIR /home/
 
-RUN echo 'lksmaoidmf'
+RUN echo 'asdfsdfdsf'
 
 RUN git clone https://github.com/lee-sungmin95/temporary_07-05.git
 
